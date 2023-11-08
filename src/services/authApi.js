@@ -5,6 +5,7 @@ export async function signIn(authObj) {
   {
     console.log("Login with code");
     const code = authObj.code;
+    console.log(code);
     const response = await api.post('/auth/sign-in-github', {code});
     return response.data;
   }
