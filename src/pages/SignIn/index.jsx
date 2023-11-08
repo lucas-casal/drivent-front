@@ -61,7 +61,7 @@ export default function SignIn() {
     const url = new URL(window.location.href);
     const code = url.search.split('=')[1]
     if(code) {
-      console.log("Code from Github");
+      console.log(code);
 
       try {
         const userData = await signIn({code : code});
